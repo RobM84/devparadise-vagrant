@@ -6,6 +6,13 @@ On `vagrant up`, a Magento test environment is provisioned using apache2, mysql5
 
 The [master branch](https://github.com/RobM84/devparadise-vagrant/tree/master) only keeps the Vagrant file and the basic structure, all Chef cookbooks need to be downloaded separately. There is a [quickstart branch](https://github.com/RobM84/devparadise-vagrant/tree/quickstart) containing all Chef cookbooks, please not these cookbooks won't be updated to newer versions. 
 
+### Magento configuration
+http://127.0.0.1:1080/
+http://127.0.0.1:1080/admin/
+Admin User: mage-admin
+Admin Password: abc1234
+
+
 ## Structure
 ./deploy_support/chef/cookbooks/    
 ./deploy_support/chef/roles/magento_dev.rb    
