@@ -2,7 +2,16 @@ Vagrant with Magento
 ====================
 
 ## Description
-The repository only keeps the Vagrant file and the basic structure, all Chef cookbooks need to be downloaded separately. On `vagrant up`, a Magento test environment is provisioned using apache2, mysql5, php and whatever Magento version you put into the `magento`folder. The sample data is downloaded and added on the first run. As soon as a `local.xml` file exists in the `./magento/app/etc/` folder, the Magento installation and import of sample data are skipped.  
+On `vagrant up`, a Magento test environment is provisioned using apache2, mysql5, php and whatever Magento version you put into the `magento`folder. The sample data is downloaded and added on the first run. As soon as a `local.xml` file exists in the `./magento/app/etc/` folder, the Magento installation and import of sample data are skipped.  
+
+The [master branch](https://github.com/RobM84/devparadise-vagrant/tree/master) only keeps the Vagrant file and the basic structure, all Chef cookbooks need to be downloaded separately. There is a [quickstart branch](https://github.com/RobM84/devparadise-vagrant/tree/quickstart) containing all Chef cookbooks, please not these cookbooks won't be updated to newer versions. 
+
+### Magento configuration
+http://127.0.0.1:1080/    
+http://127.0.0.1:1080/admin/    
+Admin User: mage-admin    
+Admin Password: abc1234    
+ 
 
 ## Structure
 ./deploy_support/chef/cookbooks/    
@@ -11,6 +20,14 @@ The repository only keeps the Vagrant file and the basic structure, all Chef coo
 ./Vagrantfile    
  
 ## How To
+### Quickstart
+1. Download & install VirtualBox => https://www.virtualbox.org/wiki/Downloads
+1. Download & install Vagrant => http://downloads.vagrantup.com/
+1. Download Magento => http://www.magentocommerce.com/download
+1. Extract Magento into `./magento/` directory
+1. Do a `vagrant up` from the base folder
+
+### Full version
 1. Download & install VirtualBox => https://www.virtualbox.org/wiki/Downloads
 1. Download & install Vagrant => http://downloads.vagrantup.com/
 1. Download Magento => http://www.magentocommerce.com/download
