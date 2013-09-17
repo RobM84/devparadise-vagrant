@@ -2,7 +2,7 @@ Lean repository for Vagrant with Magento
 ========================================
 
 ## Description
-The repository only keeps the Vagrant file and the basic structure, all Chef cookbooks need to be downloaded separately.
+The repository only keeps the Vagrant file and the basic structure, all Chef cookbooks need to be downloaded separately. On `vagrant up`, a Magento test environment is provisioned using apache2, mysql5, php and whatever Magento version you put into the `magento`folder. The sample data is downloaded and added on the first run. As soon as a `local.xml` file exists in the `./magento/app/etc/` folder, the Magento installation and import of sample data are not done anymore.  
 
 ## Structure
 ./deploy_support/chef/cookbooks/    
@@ -12,7 +12,7 @@ The repository only keeps the Vagrant file and the basic structure, all Chef coo
  
 ## How To
 1. Download & install VirtualBox => https://www.virtualbox.org/wiki/Downloads
-1. Install Vagrant => http://downloads.vagrantup.com/
+1. Download & install Vagrant => http://downloads.vagrantup.com/
 1. Download Magento => http://www.magentocommerce.com/download
 1. Extract Magento into `./magento/` directory
 1. Checkout the following Chef cookbooks into `./deploy_support/chef/cookbooks/` directory
